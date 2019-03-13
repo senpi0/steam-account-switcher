@@ -5,9 +5,10 @@ title Steam Selector
 
 :start
 echo Closing Steam service if running...
-tasklist /FI "IMAGENAME eq SteamService.exe"|find ":" >nul 
+tasklist /FI "IMAGENAME eq Steam.exe"|find ":" >nul 
 IF ERRORLEVEL 1 (
   "C:\Program Files (x86)\Steam\steam.exe" -shutdown
+  taskkill /F /T /IM Steam.exe
 )
 
 
