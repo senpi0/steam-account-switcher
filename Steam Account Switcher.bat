@@ -49,42 +49,34 @@ goto end
 
 
 :choice2
-
 set username=USERNAME
 reg add "HKCU\Software\Valve\Steam" /v AutoLoginUser /t REG_SZ /d %username% /f
 reg add "HKCU\Software\Valve\Steam" /v RememberPassword /t REG_DWORD /d 1 /f
 start steam://open/main
-
 goto end
 
 
 :choice3
-
 set username=USERNAME
 reg add "HKCU\Software\Valve\Steam" /v AutoLoginUser /t REG_SZ /d %username% /f
 reg add "HKCU\Software\Valve\Steam" /v RememberPassword /t REG_DWORD /d 1 /f
 start steam://open/main
-
 goto end
 
 
 :choice4
-
 set username=USERNAME
 reg add "HKCU\Software\Valve\Steam" /v AutoLoginUser /t REG_SZ /d %username% /f
 reg add "HKCU\Software\Valve\Steam" /v RememberPassword /t REG_DWORD /d 1 /f
 start steam://open/main
-
 goto end
 
 
 :choice5
-
 set username=USERNAME
 reg add "HKCU\Software\Valve\Steam" /v AutoLoginUser /t REG_SZ /d %username% /f
 reg add "HKCU\Software\Valve\Steam" /v RememberPassword /t REG_DWORD /d 1 /f
 start steam://open/main
-
 goto end
 
 :choice0
