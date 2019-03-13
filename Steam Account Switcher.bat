@@ -4,6 +4,7 @@ title Steam Selector
 
 
 :start
+colo 03
 echo Closing Steam service if running...
 tasklist /FI "IMAGENAME eq Steam.exe"|find ":" >nul 
 IF ERRORLEVEL 1 (
