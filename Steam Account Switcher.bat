@@ -1,29 +1,34 @@
 @echo off
 
-title Steam Selector
-
+title Steam Account Switcher
 
 :start
-colo 03
-echo Closing Steam service if running...
+color 03
+echo Checking Steam Client status...
 tasklist /FI "IMAGENAME eq Steam.exe"|find ":" >nul 
 IF ERRORLEVEL 1 (
+  echo The Steam Client needs to be closed. Continuing will terminate any running Steam Client process.
+  timeout -1
   "C:\Program Files (x86)\Steam\steam.exe" -shutdown
   taskkill /F /T /IM Steam.exe
+  echo Closing Steam Client...
 )
 
-
+tasklist /FI "IMAGENAME eq Steam.exe"|find ":" >nul 
+IF ERRORLEVEL 0 (
+   echo No running Steam Client service found, proceeding...
+)
 
 echo Welcome
 echo.
-echo ********************************
-echo * 1: name1                     *
-echo * 2: name2                     *
-echo * 3: name3                     *
-echo * 4: name4                     *
-echo * 5: name5                     *
-echo * 0: cancel                    *
-echo ********************************
+echo ****************************************
+echo   1:  name1                     
+echo   2:  name2                     
+echo   3:  name3                     
+echo   4:  name4                     
+echo   5:  name5                     
+echo   0:  cancel                    
+echo ****************************************
 echo.
 
 
@@ -88,7 +93,4 @@ goto end
 
 
 :end
-
-timeout -1
-
 exit
